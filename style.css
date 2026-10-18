@@ -1,7 +1,7 @@
 /* ===== Variabel warna: ganti warna cukup di sini ===== */
 :root {
-  --bg-page: #F6DFE0;          /* latar halaman */
-  --kuning-lembut: #FCEEA8;    /* tombol */
+  --bg-page: #F6DFE0;          /* latar halaman, teks kecil di banner */
+  --kuning-lembut: #FCEEA8;    /* tombol, judul banner */
   --rose: #EEC6C0;             /* navbar, footer, border, header tabel */
   --olive: #7f8a4f;            /* judul & garis aksen */
   --dusty-rose: #b77879;       /* fokus input */
@@ -12,6 +12,10 @@
 }
 
 /* ===== Dasar ===== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 90px;
   background-color: var(--bg-page);
@@ -35,10 +39,6 @@ h3 {
   margin-top: 32px;
 }
 
-/* ===== Scroll halus & offset navbar ===== */
-html {
-  scroll-behavior: smooth;
-}
 h1[id], h3[id] {
   scroll-margin-top: 90px;        /* supaya judul tidak tertutup navbar fixed */
 }
@@ -58,6 +58,56 @@ h1[id], h3[id] {
 }
 .navbar-custom .nav-link.active {
   font-weight: 700;
+}
+
+/* ===== Banner video (di bawah navbar) ===== */
+.video-banner {
+  position: relative;               /* supaya tulisan bisa ditumpuk di atas video */
+  margin-top: -35px;                /* tarik naik biar nempel di bawah navbar */
+  height: 180px;                    /* ± 3x tinggi navbar */
+  overflow: hidden;
+  background-color: var(--rose);    /* warna cadangan saat video belum termuat */
+}
+.video-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                /* video memenuhi banner tanpa gepeng */
+  display: block;
+}
+.video-banner::after {              /* lapisan gelap tipis biar tulisan terbaca */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Tulisan di atas banner */
+.video-banner-text {
+  position: absolute;
+  inset: 0;
+  z-index: 1;                       /* di atas lapisan gelap */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+}
+.video-banner-text h2 {
+  margin: 0;
+  font-family: "Parisienne", cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--kuning-lembut);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.video-banner-text p {
+  margin: 4px 0 0;
+  font-family: "Parisienne", cursive;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--bg-page);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* ===== Tombol & kolom search ===== */
@@ -194,17 +244,44 @@ h1[id], h3[id] {
   font-size: 0.95rem;
 }
 
-/* ===== Responsif: di bawah 768px (mobile) ===== */
+/* =====================================================
+   RESPONSIF (media query dikumpulkan di sini,
+   urut dari layar besar ke layar kecil)
+   ===================================================== */
+
+/* Tablet ke bawah: di bawah 992px */
+@media (max-width: 991.98px) {
+  /* menu hamburger yang panjang bisa di-scroll */
+  .navbar-collapse {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+}
+
+/* Mobile: di bawah 768px */
 @media (max-width: 767.98px) {
+  /* banner lebih pendek di HP */
+  .video-banner {
+    height: 120px;
+  }
+  .video-banner-text h2 {
+    font-size: 2.2rem;
+  }
+  .video-banner-text p {
+    font-size: 1.2rem;
+  }
+
   /* intro: foto di atas, teks di bawah */
   .profil-intro {
     flex-direction: column;
     text-align: center;
   }
+
   /* galeri: 4 kolom jadi 2 kolom */
   .galeri {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /* tabel: tiap baris jadi kartu, label diambil dari data-label */
   .table thead {
     display: none;
@@ -226,102 +303,17 @@ h1[id], h3[id] {
   }
 }
 
-/* ===== Responsif: HP kecil di bawah 480px ===== */
+/* HP kecil: di bawah 480px */
 @media (max-width: 479.98px) {
+  .video-banner-text h2 {
+    font-size: 1.8rem;
+  }
+  .video-banner-text p {
+    font-size: 1rem;
+  }
+
+  /* galeri: 2 kolom jadi 1 kolom */
   .galeri {
     grid-template-columns: 1fr;
   }
-}
-
-/* ===== Banner video (di bawah navbar) ===== */
-.video-banner {
-  margin-top: -35px;          /* tarik naik biar nempel di bawah navbar */
-  height: 180px;              /* ± 3x tinggi navbar */
-  overflow: hidden;
-  background-color: var(--chintz-rose);   /* warna cadangan saat video belum termuat */
-}
-.video-banner video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* video memenuhi banner tanpa gepeng */
-  display: block;
-}
-
-@media (max-width: 767.98px) {
-  .video-banner {
-    height: 120px;            /* lebih pendek di HP */
-  }
-}
-
-/* ===== Tulisan di atas banner video ===== */
-.video-banner {
-  position: relative;               /* supaya tulisan bisa ditumpuk di atas video */
-}
-.video-banner::after {              /* lapisan gelap tipis biar tulisan terbaca */
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-.video-banner-text {
-  position: absolute;
-  inset: 0;
-  z-index: 1;                       /* di atas lapisan gelap */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 0 16px;
-}
-.video-banner-text h2 {
-  color: #fff;                      /* menimpa warna judul olive dari h1,h2,h3 */
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-.video-banner-text p {
-  margin: 4px 0 0;
-  font-size: 1rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 767.98px) {
-  .video-banner-text h2 { font-size: 1.4rem; }
-  .video-banner-text p  { font-size: 0.85rem; }
-}
-
-/* ===== Font script khusus tulisan banner video ===== */
-.video-banner-text h2,
-.video-banner-text p {
-  font-family: "Parisienne", cursive;
-  font-weight: 400;
-}
-.video-banner-text h2 { font-size: 3rem; }
-.video-banner-text p  { font-size: 1.6rem; }
-
-@media (max-width: 767.98px) {
-  .video-banner-text h2 { font-size: 2.2rem; }
-  .video-banner-text p  { font-size: 1.2rem; }
-}
-/* ===== Warna tulisan banner ===== */
-.video-banner-text h2 {
-  color: #FCEEA8;                /* kuning lembut */
-}
-.video-banner-text p {
-  color: #F6DFE0;                /* pink pucat */
-}
-
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
-  }
-}
-
-@media (max-width: 479.98px) {
-  .video-banner-text h2 { font-size: 1.8rem; }
-  .video-banner-text p  { font-size: 1rem; }
 }
