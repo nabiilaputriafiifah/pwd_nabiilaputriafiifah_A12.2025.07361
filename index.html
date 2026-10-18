@@ -1,324 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>MY PORTOFOLIO</title>
-</head>
-<body bgcolor="#F4FFAD" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabiila Putri Afiifah | Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <!-- Header Halaman -->
-    <header>
-        <table width="100%" bgcolor="lightpink" cellpadding="20" border="0">
-            <tr>
-                <td align="center">
-                    <h1>NABIILA PUTRI AFIIFAH</h1>
-                    <h3>Information Systems Student - Dian Nuswantoro University</h3>
-                </td>
-            </tr>
-        </table>
-    </header>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nabiila Putri Afiifah</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-    <!-- Wrapper agar konten punya jarak nyaman di kiri-kanan, header & footer tetap mentok tepi -->
-    <table width="100%" cellpadding="25" cellspacing="0" border="0">
-    <tr><td>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
 
-    <!-- Navigasi Utama -->
-    <nav>
-        <center>
-            <br>
-            <a href="#profil">About Me</a> |
-            <a href="#pendidikan">Education</a> |
-            <a href="#keahlian">Skills & Hobbies</a> |
-            <a href="#proyek">Projects</a> |
-            <a href="#kontak">Contact</a>
-            <br><br>
-        </center>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Certificate
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#certificate">Certificate 1</a></li>
+            <li><a class="dropdown-item" href="#certificate">Certificate 2</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#certificate">Certificate 3</a></li>
+            <li><a class="dropdown-item" href="#certificate">Certificate 4</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#feedback">Feedback</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
     </nav>
 
-    <hr size="1" color="lightpink" width="90%">
+        <!-- Banner video -->
+        <header class="video-banner">
+          <video autoplay muted loop playsinline aria-hidden="true">
+            <source src="video/flamingo.mp4" type="video/mp4">
+          </video>
+          <div class="video-banner-text">
+            <h2>Nabiila Putri Afiifah</h2>
+            <p>Information Systems Student</p>
+          </div>
+        </header>
 
-    <!-- Bagian Profil -->
-    <section id="profil">
-        <h2>A. About Me</h2>
+    <main class="container my-4">
+        <h1 id="about">About Me</h1>
 
-        <!-- Gambar sticker (background sudah dihapus) menggantikan kotak Quick Facts -->
-        <img src="images/c554afc6eab85658164fcf9678e02ab3.jpg" alt="Sorry the image couldn't be loaded" align="right" width="240" height="150" hspace="20">
+        <div class="profil-intro">
+             <img src="images/barbie.jpg" class="foto-profil" alt="Foto Nabiila">
+             <p>Welcome to my personal website. This website was created
+                to introduce my profile, education, experience, and
+                activities. Through this website, visitors
+                can get to know me better.
+             </p>
+        </div>
 
-        <!-- Gambar dengan atribut HTML bawaan (align="left" untuk perataan teks) -->
-        <!-- hspace="15" → memberikan jarak horizontal 15 piksel antara gambar dan elemen/teks di sekitarnya. -->
-        <img src="images/barbie.jpg" alt="Sorry the image couldn't be loaded" width="240" height="150" align="left" hspace="20">
+
         <p>
-            Hello! My name Nabiila Putri Afiifah. I am student at Dian Nuswantoro University, majoring in <i>Information System</i>.
-            I am interest in the field of business and technology,
-            especially in how can work together to create usefull solution and opportunities.
-            Although these field are still relatively new for me,
-            I find the interesting and I eager to learn more about them.
-            I am currently exploring different areas to discover 
-            what interests me the most and to develope my skills along the way
+            My name is Nabiila Putri Afiifah. I am interested in the field of
+            business and technology, especially in how they can work together 
+            to create useful solutions and opportunities. I enjoy learning about
+            new technologies and sharing my knowledge with others.
         </p>
+
+        <h3 id="education">Education</h3>
+
         <p>
-             This portofolio is a small collection of my learning journey,
-            projects, and experiences as I continue to explore the world of
-            business and technology. I belive that experience, even a small one, 
-            is a opportunity to learn, grow, and improve my self.
+            Education plays a vital role in enhancing
+            knowledge and skills. Through education, a person
+            can develop critical thinking skills, creativity, and
+            the ability to solve various problems.
         </p>
 
-        <!-- <br clear="all">  membuat elemen berikutnya turun ke bawah dan tidak lagi dipengaruhi oleh gambar yang di-float. -->
-        <br clear="all">
-    </section>
+        <p>
+            I continue to strive to develop my skills through
+            learning, reading reference materials, practicing programming,
+            and keeping up with developments in information technology.
+        </p>
 
-    <hr size="1" color="lightpink" width="90%">
+        <h3>Skills & Hobbies</h3>
 
-    <!-- Bagian Pendidikan (Tabel Murni) -->
-    <section id="pendidikan">
-        <h2>B. Education</h2>
+        <p>
+            One of my interests is learning web programming.
+            In website development, HTML is used to build
+            the page structure, CSS to style the layout, and Bootstrap
+            to help create responsive designs.
+        </p>
 
-        <!-- Tabel menggunakan atribut HTML bawaan: border, cellpadding, cellspacing -->
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-            <tr bgcolor="lightpink">
-                <th>No</th>
-                <th>Year</th>
-                <th>School Name</th>
-                <th>Graduate</th>
-            </tr>
+        <p>
+            In addition, I am interested in developing applications that
+            are easy to use, have an attractive interface, and are accessible
+            on various devices, such as computers, tablets, and
+            cell phones.
+        </p> 
+ 
+       <h3 id="experience">Experience</h3>
 
-            <tr bgcolor="#FFFDE7">
-                <td>1</td>
-                <td>2011</td>
-                <td>3 Elementary School Pacitan</td>
-                <td>2017</td>
-            </tr>
+        <p>
+            Here are some of my experiences
+        </p>
 
-            <tr bgcolor="#FFFDE7">
-                <td>2</td>
-                <td>2017</td>
-                <td>Al-Azzam Boarding School</td>
-                <td>2020</td>
-            </tr>
-
-            <tr bgcolor="#FFFDE7">
-                <td>3</td>
-                <td>2020</td>
-                <td>Imam Bukhori Boarding School</td>
-                <td>2025</td>
-            </tr>
-
-            <tr bgcolor="#FFFDE7">
-                <td>4</td>
-                <td>2025</td>
-                <td>Dian Nuswantoro University - Information Systems</td>
-                <td>Ongoing</td>
-            </tr>
-
-        </table>
-    </section>
-
-    <hr size="1" color="lightpink" width="90%">
-
-    <!-- Bagian Keahlian & Hobi (List HTML) -->
-    <section id="keahlian">
-        <h2>C. Skills & Hobbies</h2>
-
-        <h3>1. Skills</h3>
-
-        <b>Development</b>
-        <ul>
-            <li>Web Development (HTML, PHP)</li>
-            <li>C++ programming - data structures (linked lists, trees)</li>
-        </ul>
-
-        <b>Systems & Analysis</b>
-        <ul>
-            <li>System modeling (DFD & ERD)</li>
-            <li>Business process modeling (BPMN)</li>
-            <li>Network design (Cisco Packet Tracer)</li>
-        </ul>
-
-        <h3>2. Hobbies</h3>
-        <ol>
-            <li>Watching movies</li>
-            <li>Cooking</li>
-            <li>Shopping</li>
-        </ol>
-
-        <!-- Kotak hobi pakai tabel 3 kolom -->
-        <table width="100%" cellpadding="10" cellspacing="10" border="0">
-            <tr>
-                <td bgcolor="lightpink" align="center" width="33%">🎬<br><b>Movies</b><br>Unwinding after a long study day</td>
-                <td bgcolor="lightpink" align="center" width="33%">🍳<br><b>Cooking</b><br>Trying new recipes on weekends</td>
-                <td bgcolor="lightpink" align="center" width="33%">🛍️<br><b>Shopping</b><br>Window-shopping counts too</td>
-            </tr>
-        </table>
-    </section>
-
-    <hr size="1" color="lightpink" width="90%">
-
-    <!-- Bagian Proyek (Article & Aside) -->
-    <section id="proyek">
-        <h2>D. Projects</h2>
-
-        <article>
-            <table width="100%" bgcolor="#FFFDE7" cellpadding="15" border="1" bordercolor="lightpink">
-                <tr><td>
-                    <b>Web Programming</b>
-                    <h3>Web Programming Assignment 1</h3>
-                    <p>
-                       A profile page and interactive contact form built with semantic HTML elements,
-                       structured tables, and a range of form input types the page you're looking at right now.
-                    </p>
-                </td></tr>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Activity</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" data-label="No">1</th>
+                        <td data-label="Activity">Graduation Farewell Short Film, Class of 2025, Imam Bukhori Boarding School</td>
+                        <td data-label="Role">Filming Team Member and Model</td>
+                        <td data-label="Year">2025</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-label="No">2</th>
+                        <td data-label="Activity">Master of Ceremony, OSPIM Inauguration Event, Imam Bukhori Boarding School</td>
+                        <td data-label="Role">Master of Ceremony (MC)</td>
+                        <td data-label="Year">2025</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-label="No">3</th>
+                        <td data-label="Activity">Quran Memorization Competition (MHQ), 15 Juz Category (Selection and Final Rounds), Imam Bukhori Boarding School</td>
+                        <td data-label="Role">Judge</td>
+                        <td data-label="Year">2025</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-label="No">4</th>
+                        <td data-label="Activity">Quran Memorization Competition (MHQ), 15 Juz Category, Imam Bukhori Boarding School</td>
+                        <td data-label="Role">Participant</td>
+                        <td data-label="Year">2024</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" data-label="No">5</th>
+                        <td data-label="Activity">OSPIM (Student Organization), Imam Bukhori Boarding School</td>
+                        <td data-label="Role">Head of Discipline Division</td>
+                        <td data-label="Year">2023-2024</td>
+                    </tr>
+                </tbody>
             </table>
-        </article>
+        </div>
+ 
+        <h3 id="certificate">Certificate</h3>
+        <div class="galeri">
+          <img src="images/ospim.jpg" alt="Certificate 1" class="img-klik"
+               data-bs-toggle="modal" data-bs-target="#modalSertifikat">
+          <img src="images/ifadah5.jpg" alt="Certificate 2" class="img-klik"
+              data-bs-toggle="modal" data-bs-target="#modalSertifikat">
+          <img src="images/ifadah10.jpg" alt="Certificate 3" class="img-klik"
+              data-bs-toggle="modal" data-bs-target="#modalSertifikat">
+          <img src="images/ifadah15.jpg" alt="Certificate 4" class="img-klik"
+              data-bs-toggle="modal" data-bs-target="#modalSertifikat">
+        </div>
+  
+        <h3 id="feedback">Feedback Form</h3>
+        <form class="form-saran" id="formSaran">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Name</label>
+            <input type="text" id="nama" class="form-control" placeholder="Your Name">
+          </div>
 
-        <br>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="name@email.com">
+      </div>
 
-        <article>
-            <table width="100%" bgcolor="#FFFDE7" cellpadding="15" border="1" bordercolor="lightpink">
-                <tr><td>
-                    <b>System Analysis & Design</b>
-                    <h3>Information System Design - Pita Emas Wedding Decoration</h3>
-                    <p>
-                       A mid-term system analysis project designing a complete information system for a wedding
-                       decoration SME. Covered BPMN As-Is/To-Be diagrams across six sub-processes (order design,
-                       production, inventory, field execution, finance, and cancellations), DFD Level 0 & 1, and a
-                       comprehensive ERD with around 20 tables, plus a data dictionary and CS-facing booking dashboard mockups.
-                    </p>
-                </td></tr>
-            </table>
-        </article>
+      <div class="mb-3">
+        <label for="saran" class="form-label">Feedback</label>
+        <textarea id="saran" class="form-control" rows="4" placeholder="Write your feedback for this website"></textarea>
+        <div class="form-text">Your feedback helps us improve this website.</div>
+      </div>
 
-        <br>
+    <button type="submit" class="btn btn-search">Send Feedback</button>
+</form>
+   
 
-        <article>
-            <table width="100%" bgcolor="#FFFDE7" cellpadding="15" border="1" bordercolor="lightpink">
-                <tr><td>
-                    <b>Network Infrastructure</b>
-                    <h3>Hybrid Network Design - PT. Nusantara Tech</h3>
-                    <p>
-                       A multi stage Cisco Packet Tracer project designing infrastructure for a fictional company across
-                       a head office (four floors of subnets), a branch office, and a cloud/internet segment with a web
-                       server including static routing, DHCP, wireless access, OSPF, and firewall ACL rules.
-                       Documented in a formal infrastructure report.
-                    </p>
-                </td></tr>
-            </table>
-        </article>
+        <h3>Closing</h3>
+        <p>
+            That concludes a brief introduction about me. I hope this website
+            provides useful information for its visitors.
+            Thank you for visiting my website.
+        </p>
+    </main>
 
-        <br>
+    <!-- Modal preview sertifikat -->
+    <div class="modal fade" id="modalSertifikat" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-sertifikat">
+        <div class="modal-header">
+            <h5 class="modal-title" id="judulSertifikat">Certificate</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <div class="modal-body text-center">
+            <img id="gambarModal" src="" alt="" class="img-fluid rounded">
+        </div>
+        </div>
+    </div>
+    </div>
 
-        <article>
-            <table width="100%" bgcolor="#FFFDE7" cellpadding="15" border="1" bordercolor="lightpink">
-                <tr><td>
-                    <b>Programming</b>
-                    <h3>C++ Data Structures - Billing System</h3>
-                    <p>
-                       A series of C++ programs built around singly, doubly, and circular linked lists, used to manage
-                       customer billing records (usage, tariff, billing totals). Includes sorting features and iterative
-                       feature additions on top of an existing codebase.
-                    </p>
-                </td></tr>
-            </table>
-        </article>
-
-        <br>
-
-        <!-- Element Aside -->
-        <aside>
-            <table width="100%" bgcolor="lightpink" cellpadding="10" border="0">
-                <tr><td>
-                    <p><b>Campus Note:</b> Information about class schedules and the curriculum can be found on the
-                        <a href="https://mhs.dinus.ac.id" target="_blank">Siadin Udinus</a>.</p>
-                </td></tr>
-            </table>
-        </aside>
-    </section>
-
-    <hr size="1" color="lightpink" width="90%">
-
-    <!-- Bagian Form Kontak -->
-    <section id="kontak">
-        <h2>E. Visitor Contact Form</h2>
-
-        <p>Have a question, feedback, or just want to say hi? Fill out the form below:</p>
-
-        <!-- Form murni HTML -->
-        <form action="simpan.php" method="post">
-            <table border="0" cellpadding="5">
-                <tr>
-                    <td><label for="fnama">Name</label></td>
-                    <td>:</td>
-                    <td><input type="text" id="fnama" name="fnama" size="30" required></td>
-                </tr>
-                <tr>
-                    <td><label for="femail">Email</label></td>
-                    <td>:</td>
-                    <td><input type="email" id="femail" name="femail" size="30" required></td>
-                </tr>
-                <tr>
-                    <td>Gender</td>
-                    <td>:</td>
-                    <td>
-                        <input type="radio" id="pria" name="fjkel" value="Pria">
-                        <label for="pria">Male</label>
-                        <input type="radio" id="wanita" name="fjkel" value="Wanita">
-                        <label for="wanita">Female</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="fprodi">Study Program</label></td>
-                    <td>:</td>
-                    <td>
-                        <select id="fprodi" name="fprodi">
-                            <option value="SI">Information System S1</option>
-                            <option value="TI">Computer Science S1</option>
-                            <option value="DKV">Visual Communication Design S1</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Hobbies</td>
-                    <td>:</td>
-                    <td>
-                        <input type="checkbox" id="coding" name="fhobi[]" value="Coding">
-                        <label for="coding">Coding</label>
-                        <input type="checkbox" id="reading" name="fhobi[]" value="Reading">
-                        <label for="reading">Reading</label>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label for="fpesan">Message</label></td>
-                    <td>:</td>
-                    <td>
-                        <textarea id="fpesan" name="fpesan" rows="4" cols="32"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Send Message">
-                        <input type="reset" value="Cancel">
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </section>
-
-    </td></tr>
-    </table>
-
-    <br>
-
-    <!-- Footer -->
-    <footer>
-        <table width="100%" bgcolor="lightpink" cellpadding="15" border="0">
-            <tr>
-                <td align="center">
-                    <p>&copy; 2026 Nabiila Putri Afiifah - Information Systems, Web Programming, Dian Nuswantoro University</p>
-                </td>
-            </tr>
-        </table>
+    <footer class="footer-custom">
+      <p>&copy; 2026 Nabiila Putri Afiifah · Dian Nuswantoro University</p>
     </footer>
 
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const modalEl = document.getElementById('modalSertifikat');
+      modalEl.addEventListener('show.bs.modal', function (event) {
+        const img = event.relatedTarget;                 // gambar yang diklik
+        document.getElementById('gambarModal').src = img.src;
+        document.getElementById('gambarModal').alt = img.alt;
+        document.getElementById('judulSertifikat').textContent = img.alt;
+      });
+
+      // form feedback: cegah reload halaman saat dikirim
+      document.getElementById('formSaran').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thank you for your feedback!');
+        this.reset();
+      });
+
+      // search: lompat ke bagian halaman yang memuat kata yang dicari
+        document.querySelector('form[role="search"]').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const kata = this.querySelector('input').value.trim().toLowerCase();
+        if (!kata) return;
+        const target = [...document.querySelectorAll('main h1, main h3, main p, main td')]
+            .find(el => el.textContent.toLowerCase().includes(kata));
+        if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            alert('Not found: ' + kata);
+        }   
+        });
+
+        // tutup menu hamburger otomatis setelah link diklik (mobile)
+        const menuNav = document.getElementById('navbarSupportedContent');
+        const menuCollapse = bootstrap.Collapse.getOrCreateInstance(menuNav, { toggle: false });
+        document.querySelectorAll('#navbarSupportedContent .nav-link:not(.dropdown-toggle), #navbarSupportedContent .dropdown-item')
+          .forEach(link => {
+            link.addEventListener('click', () => {
+              if (menuNav.classList.contains('show')) menuCollapse.hide();
+            });
+          }); 
+</script>
 </body>
+
 </html>
